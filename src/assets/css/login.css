@@ -1,0 +1,38 @@
+
+  .container-fluid {
+
+    height: 100px;
+    width: 100px;
+
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+  }
+  
+
+  .fw-bold{
+    color: #1B732E;
+    font-size: 10vh;
+  }
+
+  .prl{
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .mb5{
+    margin-bottom: 8vh;
+  }
+
+  .login-page {
+    background-image: url('../img/ptpn4-1516898604.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

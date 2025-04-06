@@ -1,0 +1,110 @@
+body{
+    background-color:#ffffff;
+}
+
+.ant-layout-sider-children{
+    background-color: #C9E9BF;
+    height: 100%;
+    width: auto;
+}
+
+.ant-menu-title-content{
+    color: #1B732E;
+    font-weight: bold;
+}
+
+svg{
+    color: #1B732E;
+    height: 20px;
+    width: auto;
+}
+
+.dashboard-layout {
+    height: 100%;
+    width: auto;
+  }
+
+  .header-dashboard-content {
+    padding: 0;
+    /* background-color: black; */
+    width: 100vw;
+  }
+
+  .user-badge-wrapper {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    display: flex;
+    gap: 10px;
+    z-index: 1000;
+  }
+  
+  .user-badge {
+    display: flex;
+    align-items: center;
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    padding: 8px 12px;
+    width: auto;
+    height: 40px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .icon-container {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+  }
+  
+  .username {
+    font-weight: bold;
+    color: black;
+    white-space: nowrap;
+  }
+
+
+  .h1-username {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    font-size: 5.5rem;
+    font-weight: bold;
+    color: #1B732E;
+    margin: 0;
+  }
+
+  .text-desc-olidos{
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #C9E9BF;
+    color: #1B732E;
+    font-weight: bolder;
+    font-size: medium;
+    width: 80vh;
+    margin-top:30px;
+  }
+  
+
+
+  
+  @media (max-width: 600px) {
+    .username {
+      display: none;
+    }
+  
+    .user-badge {
+      padding: 6px;
+      width: auto;
+    }
+  
+    .icon-container {
+      margin-right: 0;
+    }
+  }
+  
