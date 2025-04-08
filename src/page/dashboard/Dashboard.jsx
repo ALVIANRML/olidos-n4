@@ -4,6 +4,7 @@ import SidebarDashboard from "../../component/sidebarDashboard";
 import { UserOutlined, CrownOutlined } from "@ant-design/icons";
 import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
 import { Button, Layout, theme } from "antd";
+import Route from "../../routes/Route";
 const { Content } = Layout;
 
 const Dashboard = () => {
@@ -58,20 +59,21 @@ const Dashboard = () => {
         <Content
           className="content-layout"
           style={{
-            margin: "24px 16px",
-            padding: 50,
+            margin: "0px 10px",
+            padding: 30,
             minHeight: 280,
             background: colorBgContainer,
             borderRadius: borderRadiusLG,
           }}
         >
-          <h1 className="h1-username">
+          {/* <h1 className="h1-username">
             HI, <span className="username-name">ALVIAN</span>
           </h1>
 
           <div className="text-desc-olidos">
             <p>Selamat datang di aplikasi OLIDOS. Aplikasi ini merupakan pengembangan dari aplikasi Doctrace V.2 sebelumnya.Saat ini aplikasi OLIDOS terdiri dari 3 modul untuk di monitoring pergerakan dokumen dan progress pekerjaan yang mengacu pada Peraturan Direksi (perdir) dan realisasi yang dituang dalam bentuk S.I.A</p>
-          </div>
+          </div> */}
+          <Route/>
 
           
         </Content>

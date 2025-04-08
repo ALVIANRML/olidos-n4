@@ -1,3 +1,4 @@
+import React, { useContext } from 'react';
 import {
   FileTextFilled,
   FileAddFilled,
@@ -8,56 +9,111 @@ import {
 import { Layout, Menu } from "antd";
 const { Sider } = Layout;
 import logoMini from "../assets/img/PTPN-4.png";
-import logo from "../assets/img/logo.svg";
+import { AppContext } from "../assets/context/AppContext";
 
 export default function SidebarDashboard({ collapsed }) {
+  const {
+    handleRouteChange,
+    route,
+  } = useContext(AppContext);
+
     return (
       <Sider trigger={null} collapsible collapsed={collapsed}>
-        <div style={{ padding: "16px", textAlign: "center" }}>
+        <div
+          style={{
+            padding: "16px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: collapsed ? "center" : "flex-start",
+            transition: "all 0.3s",
+          }}
+        >
           <img
-            src={collapsed ? logoMini : logo}
-            alt="Logo"
+            src={logoMini}
+            alt="Logo Mini"
             style={{
-              width: collapsed ? "40px" : "180px",
-              transition: "all 0.5s",
+              width: "40px",
+              marginRight: collapsed ? "0" : "10px",
+              transition: "all 0.3s",
             }}
           />
+          {!collapsed && (
+            <div style={{ display: "flex", flexDirection: "column", lineHeight: "1" }}>
+              <span
+                style={{
+                  fontSize: "22px",
+                  fontWeight: "bold",
+                  color: "#1B732E",
+                }}
+              >
+                OLIDOS R2
+              </span>
+              <span
+                style={{
+                  fontSize: "6px",
+                  color: "#3CB043",
+                  marginTop: "2px",
+                  letterSpacing: "0.1px",
+                  fontWeight: "bold",
+                }}
+              >
+                ONLINE DOCUMENT SUPPORT SYSTEM
+              </span>
+            </div>
+          )}
         </div>
+
+
         <Menu
           style={{
             backgroundColor: "#C9E9BF",
             color: "#000",
           }}
           mode="inline"
-          defaultSelectedKeys={["1"]}
+          selectedKeys={[route]}
+          onClick={({ key }) => handleRouteChange(key)}
+
           items={[
             {
-              key: "1",
+              key: "dashboard",
               icon: <AppstoreFilled />,
               label: "Dashboard",
             },
             {
-              key: "2",
+              key: "au31",
               icon: <FileAddFilled style={{ color: "#1B732E" }} />,
               label: "Tambah Dokumen",
             },
             {
-              key: "3",
+              key: "Sub_AU31",
               icon: <FileTextFilled />,
-              label: "Dokumen",
+              label: "AU 31",
               children: [
-                { key: "3-1", label: "Dokumen Antrian" },
-                { key: "3-2", label: "Dokumen Progress" },
-                { key: "3-3", label: "Dokumen Selesai" },
+                { key: "Sub_AU31_antrian", label: "Dokumen Antrian" },
+                { key: "Sub_AU31_progress", label: "Dokumen Progress" },
+                { key: "Sub_AU31_selesai", label: "Dokumen Selesai" },
               ],
             },
             {
-              key: "4",
+              key: "monitoring",
               icon: <FundFilled />,
               label: "Monitoring",
+              children: [
+                { key: "monitoring_progress", label: "Progress" },
+                { key: "monitoring_selesai", label: "Selesai" },
+              ],
             },
             {
-              key: "5",
+              key: "monitoring",
+              icon: <FundFilled />,
+              label: "Monitoring",
+              children: [
+                { key: "monitoring_progress", label: "Progress" },
+                { key: "monitoring_selesai", label: "Selesai" },
+              ],
+            },
+            {
+              key: "tracking",
               icon: <EyeFilled />,
               label: "Pelacak Dokumen",
             },
