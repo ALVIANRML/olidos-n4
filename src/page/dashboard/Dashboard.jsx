@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../../assets/css/dashboard.css";
 import SidebarDashboard from "../../component/sidebarDashboard";
-import { UserOutlined } from "@ant-design/icons";
+import { UserOutlined, CrownOutlined } from "@ant-design/icons";
 import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
 import { Button, Layout, theme } from "antd";
 const { Content } = Layout;
@@ -41,9 +41,9 @@ const Dashboard = () => {
           >
             <Button className="user-badge">
               <div className="icon-container">
-                <UserOutlined />
+                <CrownOutlined />
               </div>
-              <span className="username">Alvian</span>
+              <span className="username">Chief Executive Officer</span>
             </Button>
 
             <Button className="user-badge">
