@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import "../../assets/css/dashboard.css";
-import SidebarDashboard from "../../component/sidebarDashboard";
-import { UserOutlined, CrownOutlined } from "@ant-design/icons";
-import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
-import { Button, Layout, theme } from "antd";
-import Route from "../../routes/Route";
+import React, { useState } from 'react';
+import '../../assets/css/dashboard.css';
+import SidebarDashboard from '../../component/sidebarDashboard';
+import { UserOutlined, CrownOutlined } from '@ant-design/icons';
+import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
+import { Button, Layout, theme } from 'antd';
+import Route from '../../routes/Route';
 const { Content } = Layout;
 
 const Dashboard = () => {
@@ -18,28 +18,23 @@ const Dashboard = () => {
       <SidebarDashboard collapsed={collapsed} />
       <Layout>
         <div
+          className="header-container"
           style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            padding: "16px",
-          }}
-        >
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            padding: '0px 16px',
+          }}>
           <Button
             type="text"
             icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
             onClick={() => setCollapsed(!collapsed)}
-            style={{
-              fontSize: "16px",
-              width: 64,
-              height: 64,
-            }}
+            className="toggle-sidebar-btn"
           />
 
           <div
             className="user-badge-wrapper"
-            style={{ display: "flex", gap: "10px" }}
-          >
+            style={{ display: 'flex', gap: '10px' }}>
             <Button className="user-badge">
               <div className="icon-container">
                 <CrownOutlined />
@@ -51,31 +46,24 @@ const Dashboard = () => {
               <div className="icon-container">
                 <UserOutlined />
               </div>
-              <span className="username">Alvian</span>
+              <span className="username">Admin</span>
             </Button>
           </div>
         </div>
 
         <Content
-          className="content-layout"
+          className="content-layout scrollable-content"
           style={{
-            margin: "0px 10px",
+            margin: '0px 10px',
             padding: 30,
-            minHeight: 280,
             background: colorBgContainer,
             borderRadius: borderRadiusLG,
-          }}
-        >
-          {/* <h1 className="h1-username">
-            HI, <span className="username-name">ALVIAN</span>
-          </h1>
-
-          <div className="text-desc-olidos">
-            <p>Selamat datang di aplikasi OLIDOS. Aplikasi ini merupakan pengembangan dari aplikasi Doctrace V.2 sebelumnya.Saat ini aplikasi OLIDOS terdiri dari 3 modul untuk di monitoring pergerakan dokumen dan progress pekerjaan yang mengacu pada Peraturan Direksi (perdir) dan realisasi yang dituang dalam bentuk S.I.A</p>
-          </div> */}
-          <Route/>
-
-          
+            overflow: 'auto',
+            height: 'calc(100vh - 64px)', // Adjust this value based on your header height
+          }}>
+          <div className="route-container">
+            <Route />
+          </div>
         </Content>
       </Layout>
     </Layout>
