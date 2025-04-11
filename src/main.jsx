@@ -9,10 +9,10 @@ import AppContextProvider from './assets/context/AppContext';
 import { Spin } from 'antd';
 
 function App() {
-  const [authenticated, setAuthenticated] = useState(true); // Ubah ke false biar test login
+  const [authenticated, setAuthenticated] = useState(false); // Ubah ke false biar test login
   const [loading, setLoading] = useState(false);
 
-  const handleDataFormLogin = (authStatus, loadingStatus) => {
+  const handleDataFormLogin = async (authStatus, loadingStatus) => {
     setAuthenticated(authStatus);
     setLoading(loadingStatus);
   };

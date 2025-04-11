@@ -46,7 +46,7 @@ const Dashboard = () => {
               <div className="icon-container">
                 <UserOutlined />
               </div>
-              <span className="username">Admin</span>
+              <span className="username">{ JSON.parse(localStorage.getItem("user_data")).nama }</span>
             </Button>
           </div>
         </div>

@@ -1,0 +1,33 @@
+{
+    "users" : [
+        {
+            "id": "2TAN",
+            "nama": "Tanaman",
+            "role": "VIEWER_FUNGSIONAL"
+        }, {
+            "id": "2PTI",
+            "nama": "Pengadaan",
+            "role": "VIEWER_FUNGSIONAL"
+        }, {
+            "id": "2AKN_ANGGARAN",
+            "nama": "Verifikasi Anggaran",
+            "role": "VERIFIKATOR_ANGGARAN"
+        }, {
+            "id": "2AKN_PAJAK",
+            "nama":"Verifikasi Pajak",
+            "role": "VERIFIKATOR_PAJAK"
+        }, {
+            "id": "2AKN_KAS",
+            "nama":"Kas",
+            "role": "VIEWER_KAS"
+        }, {
+            "id": "SEVPBS",
+            "nama": "Sekretariat Perusahaan",
+            "role": "VIEWER_ANPER"
+        }, {
+            "id": "DRT401",
+            "nama": "PT Wisma Karya",
+            "role": "VENDOR"
+        }
+    ]
+}

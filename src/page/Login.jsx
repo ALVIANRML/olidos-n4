@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState} from 'react';
 import '../assets/css/login.css'
 import logo from '../assets/img/logo.svg';
 import {
@@ -13,8 +13,25 @@ import {
   MDBCheckbox
 }
 from 'mdb-react-ui-kit';
+import axios from 'axios';
+import config from '../../env';
 
-function Login() {
+function Login({ onStatus }) {
+  const [username, setUsername] = useState(null)
+  const [password, setPassword] = useState(null)
+
+  const loginFunc = async (username, password) => {
+    await axios.get(`${config.base_url}/users/${username}`)
+      .then(res => {
+        alert('sukses')
+        onStatus(true, false)
+        localStorage.setItem('user_data', JSON.stringify(res.data))
+      }).catch(err => {
+        alert('gagal')
+        console.error(err)
+        onStatus(false, false)
+      })
+  }
   return (
     <div className='login-page'>
     <MDBContainer fluid>
@@ -27,12 +44,12 @@ function Login() {
 
               <div className="fw-bold mb-2 text-center"></div>
               <img className='mb5' src={logo} alt="Logo" />
-              <MDBInput wrapperClass='mb-4 w-100' label='Email address' id='formControlLg' type='email' size="lg"/>
-              <MDBInput wrapperClass='mb-4 w-100' label='Password' id='formControlLg' type='password' size="lg"/>
+              <MDBInput wrapperClass='mb-4 w-100' label='Email address' id='formControlLg' type='email' size="lg" value={username} onChange={e => setUsername(e.target.value)}/>
+              <MDBInput wrapperClass='mb-4 w-100' label='Password' id='formControlLg' type='password' size="lg" value={password} onChange={e => setPassword(e.target.value)}/>
 
               <MDBCheckbox name='flexCheck' id='flexCheckDefault' className='mb-4' label='Remember password' />
 
-              <MDBBtn style={{backgroundColor:'#1B732E'}} size='lg'>
+              <MDBBtn style={{backgroundColor:'#1B732E'}} size='lg' onClick={() => loginFunc(username, password)}>
                 Login
               </MDBBtn>
             </MDBCardBody>
