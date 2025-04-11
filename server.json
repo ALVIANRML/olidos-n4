@@ -5,6 +5,10 @@
             "nama": "Tanaman",
             "role": "VIEWER_FUNGSIONAL"
         }, {
+            "id": "2TEP",
+            "nama": "Teknik dan Pengolahan",
+            "role": "VIEWER_FUNGSIONAL"
+        },{
             "id": "2PTI",
             "nama": "Pengadaan",
             "role": "VIEWER_FUNGSIONAL"
@@ -28,6 +32,25 @@
             "id": "DRT401",
             "nama": "PT Wisma Karya",
             "role": "VENDOR"
+        }
+    ], 
+    "kontrak": [
+        {
+            "no_kontrak": "2TEP/DRT401/1/IV/2024",
+            "objek_pekerjaan": "Pembangunan Ruang Istirahat",
+            "nilai": 4000000,
+            "nilai_setelah_pajak": 4400000,
+            "lampiran": [ "SPP", "FAKTUR PAJAK", "BON" ],
+            "pemilik": "2TEP",
+            "tanggal": "2/04/2025"
+        }, {
+            "no_kontrak": "2TAN/DRT401/1/IV/2024",
+            "objek_pekerjaan": "Pembibitan",
+            "nilai": 4000000,
+            "nilai_setelah_pajak": 4400000,
+            "lampiran": [ "SPP", "FAKTUR PAJAK", "BON" ],
+            "pemilik": "2TAN",
+            "tanggal": "1/04/2025"
         }
     ]
 }
