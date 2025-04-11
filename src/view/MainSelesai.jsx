@@ -276,7 +276,7 @@ export default function MainSelesai() {
         <Title
           level={2}
           className="title">
-          SPP Antrian
+          SPP Selesai
         </Title>
         {/* <div className="action-buttons">
           <Button

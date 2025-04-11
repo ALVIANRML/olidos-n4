@@ -276,7 +276,7 @@ export default function MainProses() {
         <Title
           level={2}
           className="title">
-          SPP Antrian
+          SPP Proses
         </Title>
         {/* <div className="action-buttons">
           <Button
