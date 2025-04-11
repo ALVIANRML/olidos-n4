@@ -42,7 +42,8 @@
             "nilai_setelah_pajak": 4400000,
             "lampiran": [ "SPP", "FAKTUR PAJAK", "BON" ],
             "pemilik": "2TEP",
-            "tanggal": "2/04/2025"
+            "tanggal": "2/04/2025",
+            "lokasi": "2AKN_ANGGARAN"
         }, {
             "no_kontrak": "2TAN/DRT401/1/IV/2024",
             "objek_pekerjaan": "Pembibitan",
@@ -50,7 +51,17 @@
             "nilai_setelah_pajak": 4400000,
             "lampiran": [ "SPP", "FAKTUR PAJAK", "BON" ],
             "pemilik": "2TAN",
-            "tanggal": "1/04/2025"
+            "tanggal": "1/04/2025",
+            "lokasi": "2AKN_PAJAK"
+        }, {
+            "no_kontrak": "2TEP/DRT401/2/IV/2024",
+            "objek_pekerjaan": "Pembangunan Ruang Istirahat Kedua",
+            "nilai": 4000000,
+            "nilai_setelah_pajak": 4400000,
+            "lampiran": [ "SPP", "FAKTUR PAJAK", "BON" ],
+            "pemilik": "2TEP",
+            "tanggal": "2/04/2025",
+            "lokasi": "2TEP"
         }
     ]
 }

@@ -30,7 +30,7 @@ export default function MainAntrian() {
   
   useEffect(() => {
     const aksesDataFunc = async () => {
-      await axios.get(`${config.base_url}/kontrak?pemilik=${JSON.parse(localStorage.getItem('user_data')).id}`)
+      await axios.get(`${config.base_url}/kontrak?pemilik=${JSON.parse(localStorage.getItem('user_data')).id}&&lokasi=${JSON.parse(localStorage.getItem('user_data')).id}`)
         .then(res => {
           setData(res.data)
         }).catch(err => {
